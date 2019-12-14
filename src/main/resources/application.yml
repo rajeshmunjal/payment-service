@@ -1,0 +1,18 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: payment-service
+  cloud:
+    stream:
+      bindings:
+        input: payments
+  data:
+    mongodb:
+      authentication-database: admin
+      database: restaurant_db
+      port: 27017
+      host: localhost
+      maxConnectionTimeout: 1000*10
+      connectionPerHost: 100
+      
